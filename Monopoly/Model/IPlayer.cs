@@ -9,9 +9,7 @@ namespace Monopoly.Model
 {
     public interface IPlayer
     {
-        string Name { get; }
-        int Position { get; }
-
-        void Roll();
+        string Name { get; set; }
+        int Position { get; set; }
     }
 }

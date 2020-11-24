@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,18 +20,22 @@ namespace Monopoly
             }
         }
 
-        public static string[] GetFileLines(string filename)
+        public static string[] ReadAllResourceLines(string resourceText)
         {
-            try
+            using (StringReader reader = new StringReader(resourceText))
             {
-                return System.IO.File.ReadAllLines(filename);
+                return EnumerateLines(reader).ToArray();
             }
-            catch(System.IO.FileNotFoundException)
+        }
+
+        private static IEnumerable<string> EnumerateLines(TextReader reader)
+        {
+            string line;
+
+            while ((line = reader.ReadLine()) != null)
             {
-                Console.WriteLine("File not found");
-                return null;
+                yield return line;
             }
-         
         }
     }
 }

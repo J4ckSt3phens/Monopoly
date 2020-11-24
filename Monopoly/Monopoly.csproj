@@ -33,6 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationFramework" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -53,6 +54,11 @@
     <Compile Include="Model\Property.cs" />
     <Compile Include="Presenter\IMonopolyPresenter.cs" />
     <Compile Include="Presenter\MonopolyPresenter.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="View\IMonopolyView.cs" />
     <Compile Include="View\MonopolyView.cs">
       <SubType>Form</SubType>
@@ -68,13 +74,9 @@
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <EmbeddedResource Include="View\MonopolyForm.resx">
       <DependentUpon>MonopolyForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -90,12 +92,34 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\MONOPOLY.ttf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="BoardData.txt" />
+    <Content Include="chance.png" />
+    <Content Include="england.jpg" />
+    <Content Include="france.jpg" />
+    <Content Include="germany.png" />
+    <Content Include="italy.png" />
+    <Content Include="japan.jpg" />
+    <Content Include="Properties\beach.jpg" />
+    <Content Include="Properties\china.png" />
+    <Content Include="Properties\die 1.png" />
+    <Content Include="Properties\die 2.png" />
+    <Content Include="Properties\die 3.png" />
+    <Content Include="Properties\die 4.png" />
+    <Content Include="Properties\die 5.png" />
+    <Content Include="Properties\die 6.png" />
+    <Content Include="Properties\dice.gif" />
+    <Content Include="Properties\spain.png" />
+    <Content Include="spain.png" />
+    <Content Include="usa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

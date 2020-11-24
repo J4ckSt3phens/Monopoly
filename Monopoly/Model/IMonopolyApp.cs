@@ -13,5 +13,7 @@ namespace Monopoly.Model
         Player CurrentPlayer { get; }
 
         List<Player> Players { get; }
+
+        void NextTurn();
     }
 }

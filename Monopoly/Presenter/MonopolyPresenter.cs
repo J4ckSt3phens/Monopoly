@@ -30,7 +30,12 @@ namespace Monopoly
         }
         public void Roll()
         {
-            _monopolyApp.CurrentPlayer.Roll();
+            _monopolyApp.CurrentPlayer.Position += _monopolyApp.Board.RollDice();
+        }
+
+        public void EndTurn()
+        {
+            _monopolyApp.NextTurn();
         }
     }
 }

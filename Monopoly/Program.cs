@@ -18,7 +18,10 @@ namespace Monopoly
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             List<string> players = new List<string>(1);
-            players.Add("Jack");
+            players.Add("P1");
+            players.Add("P2");
+            players.Add("P3");
+            players.Add("P4");
             Application.Run(new MonopolyView(new MonopolyApp(players)));
         }
     }

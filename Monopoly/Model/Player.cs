@@ -26,6 +26,10 @@ namespace Monopoly.Model
             {
                 return _name;
             }
+            set
+            {
+                _name = value;
+            }
         }
         public int Position
         {
@@ -33,20 +37,16 @@ namespace Monopoly.Model
             {
                 return _position;
             }
-        }
-
-        public void Roll()
-        {
-            int newPosition = _position;
-            newPosition += Utilities.GetRandomNumber(1, 6) + Utilities.GetRandomNumber(1, 6);
-            if (newPosition > 31)
+            set
             {
-                _position = newPosition - 31;
-            } else
-            {
-                _position = newPosition;
+                if (value > 31)
+                {
+                    _position = value - 31;
+                } else
+                {
+                   _position = value;
+                }
             }
-            Console.WriteLine(_position);
         }
     }
 }

@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Monopoly.Properties
-{
-
-
+namespace Monopoly.Properties {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -19,52 +19,286 @@ namespace Monopoly.Properties
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "4.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class Resources
-    {
-
+    internal class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if ((resourceMan == null))
-                {
+        internal static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Monopoly.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        internal static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap beach {
+            get {
+                object obj = ResourceManager.GetObject("beach", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Start,Other
+        ///Granada,Property,Spain
+        ///Sevilla,Property,Spain
+        ///Madrid,Property,Spain
+        ///Bali,Resort
+        ///Hong Kong,Property,China
+        ///Beijing,Property,China
+        ///Shanghai,Property,China
+        ///Jail,Other
+        ///Venice,Property,Italy
+        ///Milan,Property,Italy
+        ///Rome,Property,Italy
+        ///Chance,Other
+        ///Hamburg,Property,Germany
+        ///Cyprus,Resort
+        ///Berlin,Property,Germany
+        ///Free Parking,Other
+        ///Manchester,Property,BE
+        ///Dubai,Resort
+        ///London,Property,BE
+        ///Chance,Other
+        ///Chicago,Property,USA
+        ///Las Vegas,Property,USA
+        ///New York,Property,USA
+        ///World Tour,Other
+        ///Nic [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string BoardData {
+            get {
+                return ResourceManager.GetString("BoardData", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap chance {
+            get {
+                object obj = ResourceManager.GetObject("chance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap china {
+            get {
+                object obj = ResourceManager.GetObject("china", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Dice {
+            get {
+                object obj = ResourceManager.GetObject("Dice", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap die_1 {
+            get {
+                object obj = ResourceManager.GetObject("die_1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap die_2 {
+            get {
+                object obj = ResourceManager.GetObject("die_2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap die_3 {
+            get {
+                object obj = ResourceManager.GetObject("die_3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap die_4 {
+            get {
+                object obj = ResourceManager.GetObject("die_4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap die_5 {
+            get {
+                object obj = ResourceManager.GetObject("die_5", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap die_6 {
+            get {
+                object obj = ResourceManager.GetObject("die_6", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap england {
+            get {
+                object obj = ResourceManager.GetObject("england", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap france {
+            get {
+                object obj = ResourceManager.GetObject("france", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap germany {
+            get {
+                object obj = ResourceManager.GetObject("germany", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap italy {
+            get {
+                object obj = ResourceManager.GetObject("italy", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap japan {
+            get {
+                object obj = ResourceManager.GetObject("japan", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] MONOPOLY {
+            get {
+                object obj = ResourceManager.GetObject("MONOPOLY", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to using Monopoly.Model;
+        ///using System;
+        ///using System.Collections.Generic;
+        ///using System.Linq;
+        ///using System.Threading.Tasks;
+        ///using System.Windows.Forms;
+        ///
+        ///namespace Monopoly
+        ///{
+        ///    static class Program
+        ///    {
+        ///        /// &lt;summary&gt;
+        ///        /// The main entry point for the application.
+        ///        /// &lt;/summary&gt;
+        ///        [STAThread]
+        ///        static void Main()
+        ///        {
+        ///            Application.EnableVisualStyles();
+        ///            Application.SetCompatibleTextRenderingDefault(false);
+        ///            List&lt;string&gt;  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Program {
+            get {
+                return ResourceManager.GetString("Program", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spain {
+            get {
+                object obj = ResourceManager.GetObject("spain", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap usa {
+            get {
+                object obj = ResourceManager.GetObject("usa", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
     }

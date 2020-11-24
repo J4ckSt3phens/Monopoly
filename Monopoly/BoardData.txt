@@ -1,6 +1,6 @@
 ﻿Start,Other
 Granada,Property,Spain
-Sevilla,Propert,Spain
+Sevilla,Property,Spain
 Madrid,Property,Spain
 Bali,Resort
 Hong Kong,Property,China

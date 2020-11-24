@@ -11,7 +11,8 @@ namespace Monopoly.Model
     {
         private Board _board;
         private List<Player> _players;
-        private Player _currentPlayer;
+        private int _currentPlayer;
+
         public MonopolyApp(List<String> playerNames)      
         {
             _board = new Board();
@@ -20,14 +21,14 @@ namespace Monopoly.Model
             {
                 _players.Add(new Player(playerName));
             }
-            _currentPlayer = _players.ElementAt(Utilities.GetRandomNumber(0, _players.Count - 1));
+            _currentPlayer = Utilities.GetRandomNumber(0, _players.Count - 1);
         }
 
         public Player CurrentPlayer
         {
             get
             {
-                return _currentPlayer;
+                return _players.ElementAt(_currentPlayer);
             }
         }
 
@@ -44,6 +45,15 @@ namespace Monopoly.Model
             get
             {
                 return _players;
+            }
+        }
+
+        public void NextTurn()
+        {
+            _currentPlayer += 1;
+            if (_currentPlayer == _players.Count)
+            {
+                _currentPlayer = 0;
             }
         }
     }
