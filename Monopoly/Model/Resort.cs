@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Policy;
@@ -8,41 +7,33 @@ using System.Threading.Tasks;
 
 namespace Monopoly.Model
 {
-    public class Property : Square
+    public class Resort : Square
     {
 
-
-        String _groupName = "";
         private int BASE_RENT;
-        Player _owner;
+        private bool _owned;
         private int _buyPrice;
         private int _sellPrice;
-        private int _upgradeTier = 1;
+        private int _rent;
+        private int _upgradeTier = 0;
 
-        public Property(string name, string type, string groupName, int buyPrice) : base(name, type)
+        public Resort(string name, string type, int rent) : base(name, type)
         {
-            BASE_RENT = (int)(buyPrice * 0.25);
-            _groupName = groupName;
-            _buyPrice = buyPrice;
-            _owner = null; 
+            BASE_RENT = rent;
+            _owned = false; 
         }
 
-        public string GroupName
+        public bool Owned
         {
-            get { return _groupName; }
-        }
+            get { return _owned; }
 
-        public Player Owner
-        {
-            get { return _owner; }
-
-            set { _owner = value; }
+            set { _owned = value; }
         }
 
         public int BuyPrice
         {
             get { return _buyPrice; }
-            set { _buyPrice = value; }
+            set { _buyPrice = value;  }
         }
 
         public int SellPrice
@@ -53,14 +44,15 @@ namespace Monopoly.Model
 
         public int Rent
         {
-            get { return BASE_RENT*_upgradeTier; }
+            get { return _rent; }
+            set { _rent = value; }
         }
 
         public int UpgradeTier
         {
             get { return _upgradeTier; }
             set
-            {
+            { 
                 if (_upgradeTier < 3)
                 {
                     _upgradeTier += 1;

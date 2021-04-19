@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -50,8 +65,13 @@
     <Compile Include="Constants.cs" />
     <Compile Include="Model\IMonopolyApp.cs" />
     <Compile Include="Model\IPlayer.cs" />
+    <Compile Include="Model\AIPlayer.cs" />
     <Compile Include="Model\Player.cs" />
+    <Compile Include="Model\Resort.cs" />
     <Compile Include="Model\Property.cs" />
+    <Compile Include="Model\RotatedLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Presenter\IMonopolyPresenter.cs" />
     <Compile Include="Presenter\MonopolyPresenter.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -59,8 +79,33 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Include="View\IMonopolyView.cs" />
-    <Compile Include="View\MonopolyView.cs">
+    <Compile Include="View\Game\Dialogs\JailDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Game\Dialogs\JailDialog.Designer.cs">
+      <DependentUpon>JailDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Game\Dialogs\RentDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Game\Dialogs\RentDialog.Designer.cs">
+      <DependentUpon>RentDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Game\Dialogs\BuyDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Game\Dialogs\BuyDialog.Designer.cs">
+      <DependentUpon>BuyDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Menu\IMenuView.cs" />
+    <Compile Include="View\Game\IMonopolyView.cs" />
+    <Compile Include="View\Menu\MenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Menu\MenuView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Game\MonopolyView.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Model\Board.cs" />
@@ -69,7 +114,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilities.cs" />
-    <Compile Include="View\MonopolyForm.cs">
+    <Compile Include="View\Game\MonopolyForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -77,10 +122,19 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\MonopolyForm.resx">
+    <EmbeddedResource Include="View\Game\Dialogs\BuyDialog.resx">
+      <DependentUpon>BuyDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Menu\MenuForm.resx">
+      <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Game\MonopolyForm.resx">
       <DependentUpon>MonopolyForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="View\MonopolyView.resx">
+    <EmbeddedResource Include="View\Menu\MenuView.resx">
+      <DependentUpon>MenuView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Game\MonopolyView.resx">
       <DependentUpon>MonopolyView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
@@ -98,13 +152,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="BoardData.txt" />
-    <Content Include="chance.png" />
-    <Content Include="england.jpg" />
-    <Content Include="france.jpg" />
-    <Content Include="germany.png" />
-    <Content Include="italy.png" />
-    <Content Include="japan.jpg" />
+    <Content Include="Assets\BoardData.txt" />
+    <Content Include="Assets\chance.png" />
+    <Content Include="Assets\england.jpg" />
+    <Content Include="Assets\france.jpg" />
+    <Content Include="Assets\germany.png" />
+    <Content Include="Assets\hotel.png" />
+    <Content Include="Assets\house.jpg" />
+    <Content Include="Assets\italy.png" />
+    <Content Include="Assets\japan.jpg" />
     <Content Include="Properties\beach.jpg" />
     <Content Include="Properties\china.png" />
     <Content Include="Properties\die 1.png" />
@@ -115,11 +171,35 @@
     <Content Include="Properties\die 6.png" />
     <Content Include="Properties\dice.gif" />
     <Content Include="Properties\spain.png" />
-    <Content Include="spain.png" />
-    <Content Include="usa.png" />
+    <None Include="Resources\freeparking.jpg" />
+    <None Include="Resources\jail.jpg" />
+    <None Include="Resources\go.jpg" />
+    <None Include="Resources\worldtour.jpg" />
+    <None Include="Resources\wordtour.jpg" />
+    <None Include="Resources\tax.jpg" />
+    <None Include="Resources\cornerinjail.jpg" />
+    <None Include="Resources\boot.jpg" />
+    <None Include="Resources\car.jpg" />
+    <None Include="Resources\dog.jpg" />
+    <None Include="Resources\hat.jpg" />
+    <None Include="Resources\iron.jpg" />
+    <None Include="Resources\ship.jpg" />
+    <None Include="Resources\thimble.jpg" />
+    <None Include="Resources\wheelbarrow.jpg" />
+    <Content Include="Assets\spain.png" />
+    <Content Include="Assets\usa.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\" />
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

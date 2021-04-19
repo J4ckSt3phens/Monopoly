@@ -1,0 +1,32 @@
+﻿Start,Other
+Granada,Property,Spain,50
+Sevilla,Property,Spain,100
+Madrid,Property,Spain,150
+Bali,Resort
+Hong Kong,Property,China,200
+Beijing,Property,China,250
+Shanghai,Property,China,300
+Jail,Other
+Venice,Property,Italy,350
+Milan,Property,Italy,400
+Rome,Property,Italy,450
+Chance,Other
+Hamburg,Property,Germany,500
+Cyprus,Resort
+Berlin,Property,Germany,550
+Free Parking,Other
+Manchester,Property,BE,600
+Dubai,Resort
+London,Property,BE,650
+Chance,Other
+Chicago,Property,USA,700
+Las Vegas,Property,USA,750
+New York,Property,USA,800
+World Tour,Other
+Nice,Resort
+Lyon,Property,France,850
+Paris,Property,France,900
+Chance,Other
+Osaka,Property,Japan,950
+Tax,Other
+Tokyo,Property,Japan,1000

@@ -25,7 +25,7 @@ namespace Monopoly.Model
                 switch(type)
                 {
                     case "Property":
-                        _squares.Add(new Property(square[0], square[1], square[2]));
+                        _squares.Add(new Property(square[0], square[1], square[2], Int32.Parse(square[3])));
                         break;
                     default:
                         _squares.Add(new Square(square[0], square[1]));

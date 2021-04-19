@@ -5,13 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Monopoly
+namespace Monopoly.View.Menu
 {
-    public interface IMonopolyView
+    public interface IMenuView
     {
-        Board BoardUI { set; }
-
-        List<Player> PlayersUI { set; } 
 
     }
 }

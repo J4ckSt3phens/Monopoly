@@ -1,6 +1,8 @@
 ﻿using Monopoly.Model;
+using Monopoly.View.Game;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -17,11 +19,11 @@ namespace Monopoly
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            List<string> players = new List<string>(1);
-            players.Add("P1");
-            players.Add("P2");
-            players.Add("P3");
-            players.Add("P4");
+            List<(string, Color)> players = new List<(string, Color)>(1);
+            players.Add(("Mason", Color.Green));
+            players.Add(("Anto", Color.Blue));
+            players.Add(("Marcus", Color.Red));
+            players.Add(("Bruno", Color.Yellow));
             Application.Run(new MonopolyView(new MonopolyApp(players)));
         }
     }

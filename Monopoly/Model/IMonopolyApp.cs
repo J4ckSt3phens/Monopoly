@@ -15,5 +15,11 @@ namespace Monopoly.Model
         List<Player> Players { get; }
 
         void NextTurn();
+
+        (string, Square) QueuePlayerAction();
+
+        void BuyProperty();
+
+        void PayRent();
     }
 }

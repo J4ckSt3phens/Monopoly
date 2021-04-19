@@ -11,5 +11,6 @@ namespace Monopoly.Model
     {
         string Name { get; set; }
         int Position { get; set; }
+        int Balance { get; set; }
     }
 }
